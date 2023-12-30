@@ -69,6 +69,10 @@ export const navigation = [
     href: 'about',
   },
   {
+    name: 'Team',
+    href: 'team',
+  },
+  {
     name: 'Contact',
     href: 'contact',
   },

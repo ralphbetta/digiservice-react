@@ -4,7 +4,7 @@ import { AppButton } from './AppButton'
 
 const Team = () => {
   return (
-    <div className='mt-10 md:mt-20 px-5 lg:px-40 flex space-y-5 flex-col items-center md:flex-row justify-between'>
+    <div id='team' className='mt-10 md:mt-20 px-5 lg:px-40 flex space-y-5 flex-col items-center md:flex-row justify-between'>
         <div className=' md:w-[40%] flex flex-col space-y-5'>
             <h2 className=' font-semibold text-3xl'>Working together, to create something unique</h2>
             <p className=' text-gray-400'>

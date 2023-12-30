@@ -1,6 +1,7 @@
 import BottomNav from './components/BottomNav';
 import Brand from './components/Brand';
 import Clients from './components/Clients';
+import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Nav from './components/Nav';
 import Newsletter from './components/Newsletter';
@@ -18,6 +19,7 @@ function App() {
       <Clients/>
       <Newsletter/>
       <BottomNav />
+      <Footer/>
     </div>
   );
 }

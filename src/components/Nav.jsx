@@ -22,7 +22,7 @@ const Nav = () => {
     }
 
     return (
-        <div className='mb-20'>
+        <div id='home' className='mb-20'>
             <div className='px-5 lg:px-40 h-20 justify-between items-center flex flex-row bg-white fixed left-0 right-0 top-0 -z-20000'>
                 {/* Logo Section */}
                 <div className='flex flex-row space-x-2 items-center'>
@@ -39,7 +39,7 @@ const Nav = () => {
                 <ul className=' hidden md:flex flex-row space-x-5 items-center'>
                     {navigation.map((item, index) =>
                         <li className={index === activeIndex ? 'font-semibold underline underline-offset-8 text-primary cursor-pointer' : 'font-semibold hover:underline underline-offset-8 hover:text-primary cursor-pointer'} key={index}>
-                            <Link onClick={()=>toggleActiveIndex(index)} to={item.href} spy={true} smooth={true} offset={100}>
+                            <Link onClick={()=>toggleActiveIndex(index)} to={item.href} spy={true} smooth={true} offset={-100}>
                                 {item.name}
                             </Link>
                         </li>
@@ -53,10 +53,10 @@ const Nav = () => {
             </div>
 
             {/* Dropdown */}
-            <div className={!isMenu ? " hidden" : 'bg-primary hover:bg-secondary fixed flex flex-col w-full space-y-4 text-white px-5 py-4'}>
+            <div className={!isMenu ? " hidden" : 'bg-primary fixed flex flex-col w-full space-y-4 text-white px-5 py-4'}>
                 {navigation.map((item, index) =>
                     <div key={index}>
-                        <Link to={item.href} spy={true} smooth={true} offset={100}>
+                        <Link className=' hover:text-gray-200' to={item.href} spy={true} smooth={true} offset={-100}>
                             {item.name}
                         </Link>
                     </div>
