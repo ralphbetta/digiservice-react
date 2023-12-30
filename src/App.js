@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Nav from './components/Nav';
 import Newsletter from './components/Newsletter';
-import Offer from './components/Offer';
+import About from './components/About';
 import Team from './components/Team';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <Nav/>
       <Hero/>
       <Brand/>
-      <Offer/>
+      <About/>
       <Team/>
       <Clients/>
       <Newsletter/>

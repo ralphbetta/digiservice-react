@@ -2,18 +2,18 @@ import { HeroImage } from '../constants'
 import React from 'react'
 import { AppButton } from './AppButton'
 import { motion } from 'framer-motion'
-import { fadeIn } from '../motion';
+import { slideIn } from '../motion';
 
 const Hero = () => {
     return (
         <div className='px-5 pt-6 md:pt-0 lg:px-40 md:h-[50vh] flex flex-col md:flex-row justify-between'>
             {/* Left Hero Item */}
             <motion.div
-                variants={fadeIn("right", 0.2)}
-                initial='initial'
-                animate='animate'
-                exit='exit'
-                className=' md:w-[45%] flex flex-col justify-center space-y-5'>
+                initial={slideIn('right', 1).initial}
+                whileInView={slideIn(0, 0).default}
+                transition={slideIn('', 1).transition}
+
+                className=' md:w-[45%] flex flex-col justify-center space-y-5 -z-50'>
                 <div className='flex'>
                     <p className=' text-primary uppercase'>Digital Agency</p>
                     <div className=' w-16 border-primary border-b-2'></div>
@@ -25,11 +25,11 @@ const Hero = () => {
 
             {/* Right Hero Item */}
             <motion.div
-                variants={fadeIn("left", 0.2)}
-                initial='initial'
-                animate='animate'
-                exit='exit'
-                className=' md:w-[45%] flex flex-col justify-center'>
+                initial={slideIn('up', 1).initial}
+                whileInView={slideIn(0, 0).default}
+                transition={slideIn('', 1).transition}
+
+                className=' md:w-[45%] flex flex-col justify-center -z-50'>
                 <img className=' w-full h-full object-scale-down' src={HeroImage} alt="" />
             </motion.div>
         </div>

@@ -18,11 +18,11 @@ const Brand = () => {
                 {brands.map((brand, index) =>
                     <motion.div
                         
-                        initial={slideIn('right', 1).initial}
+                        initial={slideIn('down', 1).initial}
                         whileInView={slideIn(0, 0).default}
                         transition={slideIn('', index).transition}
 
-                        className='' key={index}>
+                        className=' -z-50' key={index}>
                         <img className='' src={brand.img} alt="" />
                     </motion.div>
                 )}
