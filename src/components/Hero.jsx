@@ -18,7 +18,7 @@ const Hero = () => {
                     <p className=' text-primary uppercase'>Digital Agency</p>
                     <div className=' w-16 border-primary border-b-2'></div>
                 </div>
-                <h2 className=' text-4xl md:text-6xl xl:text-7xl font-bold'>Creating you <br /> from <span className='text-primary'> your brand</span></h2>
+                <h2 className=' text-4xl md:text-6xl xl:text-5xl font-bold'>Creating you <br /> from <span className='text-primary'> your brand</span></h2>
                 <p>Advertising agency is a free profeciency association that works in playing out the assignment of marketing</p>
                 {AppButton("Get Started")}
             </motion.div>
