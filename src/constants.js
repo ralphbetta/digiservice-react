@@ -18,6 +18,8 @@ import {
   AiOutlineMenu,
   AiOutlineClose,
   AiFillCiCircle,
+  AiOutlineStar,
+  AiFillStar
 } from 'react-icons/ai';
 
 // companies icons
@@ -43,7 +45,7 @@ export const Review = Section3;
 
 
 // logo -banner - about
-export const Logo = 'https://img.icons8.com/ios-filled/50/4CAF4F/amazon-alexa-logo.png';
+export const Logo = 'https://img.icons8.com/ios-filled/50/FD620C/amazon-alexa-logo.png';
 
 
 export const logoCaption = "DigiService";

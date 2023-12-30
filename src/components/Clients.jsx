@@ -1,6 +1,14 @@
 import React from 'react'
-import { Review } from '../constants'
-import { AppButton } from './AppButton'
+import { Review, icons } from '../constants'
+
+import {
+  AiOutlineStar,
+  AiFillStar
+} from 'react-icons/ai';
+
+import { IoIosArrowDropright, IoIosArrowDropleft } from "react-icons/io";
+
+
 
 const Clients = () => {
   return (
@@ -12,11 +20,31 @@ const Clients = () => {
         </p>
         <div>
           <h3 className=' font-semibold'>Kierra  Franci</h3>
-          <p className=' text-gray-400'>SEO Analyst</p>
+          <p className=' text-gray-500'>SEO Analyst</p>
         </div>
-        {AppButton("Learn More")}
+        <div className=' flex flex-row items-center justify-between text-primary'>
+
+          <div className=' flex flex-row items-center text-primary'>
+            <AiFillStar />
+            <AiFillStar />
+            <AiFillStar />
+            <AiFillStar />
+            <AiOutlineStar />
+            <h3 className=' ml-5 font-semibold text-black'>4.1</h3>
+          </div>
+
+          <div className='text-5xl space-x-5 flex flex-row'>
+            <button>
+              <IoIosArrowDropleft className=' text-gray-300' />
+            </button>
+            <button>
+              <IoIosArrowDropright />
+            </button>
+          </div>
+
+        </div>
       </div>
-      <div className=' md:w-[40%] flex bg-slate-500'>
+      <div className=' md:w-[40%] fle '>
         <img className=' w-96 h-96 object-scale-down' src={Review} alt="" />
       </div>
     </div>

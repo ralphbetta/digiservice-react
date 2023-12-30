@@ -4,7 +4,7 @@ import { offers } from '../constants'
 const Offer = () => {
   return (
     <div className='px-5 lg:px-40 mt-10 md:mt-24'>
-        <h1 className=' text-center font-semibold text-3xl'>We That About the Agency</h1>
+        <h1 className=' text-center font-semibold text-3xl'>What About the Agency</h1>
         <p className=' text-center text-gray-400 mt-3'>A place where ideas grow. So. For the purpose, choose catchy</p>
 
         <div className=' flex flex-col md:flex-row md:space-x-8 mt-12'>
