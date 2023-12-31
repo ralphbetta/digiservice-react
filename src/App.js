@@ -7,6 +7,7 @@ import Nav from './components/Nav';
 import Newsletter from './components/Newsletter';
 import About from './components/About';
 import Team from './components/Team';
+import CustomSlider from './components/Slider';
 
 function App() {
   return (

@@ -12,7 +12,7 @@ const Footer = () => {
         <div className='flex flex-row items-center space-x-2'>
             <p>Join Our Social Community</p>
             <div className=' flex flex-row space-x-2'>
-            {social.map((item)=> item.icon)}
+            {social.map((item, index)=><span key={index}>{ item.icon}</span>)}
             </div>
         </div>
     </div>
