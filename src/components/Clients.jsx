@@ -33,25 +33,32 @@ const Clients = () => {
   };
 
   const goToPrev = () => {
-  
+
 
     if (swiperRef.current && swiperRef.current.swiper) {
       setActiveIndex(swiperRef.current.swiper.activeIndex)
       swiperRef.current.swiper.slidePrev();
-     
+
     }
   };
 
+  const data = [
+    {
+      content: "  Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock.",
+      rating: 4.2,
+    },
+    {
+      content: "  Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock.",
+      rating: 3.0,
+    },
+    {
+      content: "  Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock.",
+      rating: 4.1,
+    }
+  ];
+
   return (
     <div className='mt-10 md:mt-20 px-5 lg:px-40 flex space-y-5 flex-col items-center md:flex-row-reverse justify-between'>
-
-
-      {/* <div
-        className=' md:w-[40%] flex flex-col space-y-5 -z-30'> */}
-
-
-
-
 
       <div className='w-full md:w-1/2'>
 
@@ -63,32 +70,39 @@ const Clients = () => {
           spaceBetween={50}
           slidesPerView={1}
         >
-          <SwiperSlide className="blue-slide flex flex-col space-y-5">
+          {
+            data.map((item, index) =>
 
-            <p className=' text-gray-400 mt-5'>
-              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock.
-            </p>
-            <div className=' flex flex-row items-center text-primary'>
-              <AiFillStar />
-              <AiFillStar />
-              <AiFillStar />
-              <AiFillStar />
-              <AiOutlineStar />
-              <h3 className=' ml-5 font-semibold text-black'>4.1</h3>
-            </div>
+              <SwiperSlide className="blue-slide flex flex-col space-y-5" key={index}>
+                <p className=' text-gray-400 mt-5'>
+                  {item.content}
+                </p>
+                <div className=' flex flex-row items-center text-primary'>
 
-          </SwiperSlide>
+                  {Array.from({ length: item.rating }, (_, i) => (
+                    <AiFillStar key={i} />
+                  ))}
 
-          <SwiperSlide className="yellow-slide">Slide 2</SwiperSlide>
-          <SwiperSlide className="green-slide">Slide 3</SwiperSlide>
+
+                  {Array.from({ length: Math.round( 5- item.rating )}, (_, i) => (
+                      <AiOutlineStar key={i} />
+                  ))}
+
+                
+                  <h3 className=' ml-5 font-semibold text-black'>{item.rating}</h3>
+                </div>
+              </SwiperSlide>
+
+            )
+          }
         </Swiper>
 
         <div className='text-5xl space-x-5 flex flex-row justify-end'>
           <button onClick={goToPrev}>
-            <IoIosArrowDropleft className={activeIndex <= 0  ? ' text-gray-300' : ' text-black' }/>
+            <IoIosArrowDropleft className={activeIndex <= 0 ? ' text-gray-300' : ' text-black'} />
           </button>
           <button onClick={goToNext}>
-            < IoIosArrowDropright  className={activeIndex == 2  ? ' text-gray-300' : ' text-black' } />
+            < IoIosArrowDropright className={activeIndex == 2 ? ' text-gray-300' : ' text-black'} />
           </button>
         </div>
       </div>
